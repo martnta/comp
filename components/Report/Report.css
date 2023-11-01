@@ -1,0 +1,46 @@
+/* grid c3 */
+.grid-c3 {
+  @apply flex flex-col;
+}
+
+.grid-c3-content {
+  @apply flex-1;
+}
+
+.grid-chart {
+  @apply grid grid-cols-6 items-stretch h-full;
+}
+
+.chart-vert-value {
+  @apply flex flex-col justify-between pb-28;
+}
+
+.grid-chart-bar {
+  @apply flex flex-col text-center;
+}
+
+.grid-chart-bar .bar-wrapper {
+  @apply flex-1 w-32 mx-auto border bg-red-400 relative overflow-hidden;
+}
+
+.grid-chart-bar .grid-hortz-value {
+  @apply mt-12;
+}
+
+.grid-chart-bar .bar-item1 {
+  @apply absolute bottom-0 left-0 w-full bg-red-600 border;
+}
+
+.grid-chart-bar .bar-item2 {
+  @apply absolute bottom-0 left-0 w-full h-0 bg-red-300 border;
+}
+
+.grid-chart-bar:nth-child(3) .bar-wrapper .bar-item1 {
+  @apply z-10;
+}
+
+@media screen and (max-width: 992px) {
+  .grid-c3 {
+    @apply col-start-1 col-end-3 h-full;
+  }
+}
